@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pembelian Voucher - AIWA Voucher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="checkout">
+        <div class="checkout-container">
+            <h2>Form Pembelian Voucher</h2>
+            <!-- Formulir dengan action yang diarahkan ke Formspree -->
+            <form action="https://formspree.io/f/xovjnywv" method="POST">
+                <!-- Nama Lengkap -->
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Nomor WhatsApp dengan Validasi -->
+                <label for="whatsapp">Nomor WhatsApp Anda</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Masukkan Nomor WhatsApp Anda" required pattern="\d{12,15}" minlength="12" maxlength="15" title="Nomor WhatsApp harus terdiri dari minimal 12 digit angka" />
+
+                <!-- Pilih Voucher -->
+                <label for="voucher">Pilih Voucher</label>
+                <select id="voucher" name="voucher">
+                    <option value="3days">Voucher 3 Jam - Rp 3,000</option>
+                    <option value="12hours">Voucher 12 Jam - Rp 6,000</option>
+                    <option value="3dayslong">Voucher 3 Hari - Rp 16,000</option>
+                </select>
+
+                <!-- Tombol untuk melanjutkan -->
+                <button type="submit" class="btn">Lanjutkan Pembayaran</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 AIWA Voucher. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
