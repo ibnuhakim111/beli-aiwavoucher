@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konfirmasi Pembayaran - AIWA Voucher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Menghubungkan dengan file CSS -->
+    <style>
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo styling */
+        .navbar .logo {
+            margin-left: 20px;
+            width: 150px; /* Ukuran logo lebih besar */
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-right: 20px;
+            display: flex;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Menambahkan logo di kiri atas -->
+            <img src="img/logo.png" alt="Logo" class="logo"> <!-- Logo diambil dari img/logo.png -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="confirmation">
+        <div class="checkout-container">
+            <h2>Konfirmasi Pembayaran</h2>
+            <p>Terima kasih! Pembelian Anda berhasil diproses.</p>
+            <p>Voucher yang Anda pilih: <strong>Voucher 3 Jam</strong></p>
+            <p>Harga: <strong>Rp 3,000</strong></p>
+            <p>Untuk melanjutkan pembayaran, klik tombol di bawah untuk menghubungi kami via WhatsApp.</p>
+            
+            <!-- Tombol Lanjutkan Pembayaran via WhatsApp -->
+            <a href="https://wa.me/6282254757180?text=Saya%20ingin%20membeli%20Voucher%20AIWA%20Voucher%203%20Jam%20senilai%20Rp%203,000" target="_blank" class="btn">Lanjutkan Pembayaran via WhatsApp</a>
+
+            <p>Jika Anda sudah melakukan pembayaran, Anda akan menerima voucher segera setelah konfirmasi melalui WhatsApp.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 AIWA Voucher. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

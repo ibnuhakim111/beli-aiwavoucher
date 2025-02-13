@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout - AIWA Voucher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Menghubungkan dengan file CSS -->
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #007bff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo styling */
+        .navbar .logo {
+            margin-left: 20px;
+            width: 150px; /* Ukuran logo lebih besar */
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin-right: 20px;
+            display: flex;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Menambahkan logo di kiri atas -->
+            <img src="img/logo.png" alt="Logo" class="logo"> <!-- Logo diambil dari img/logo.png -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="checkout">
+        <div class="checkout-container">
+            <h2>Form Pembelian Voucher</h2>
+            <form action="payment.html" method="POST">
+                <!-- Nama Lengkap -->
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Nomor WhatsApp dengan Validasi -->
+                <label for="whatsapp">Nomor WhatsApp Anda</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Masukkan Nomor WhatsApp Anda" required pattern="\d{12,15}" minlength="12" maxlength="15" title="Nomor WhatsApp harus terdiri dari minimal 12 digit angka" />
+
+                <!-- Pilih Voucher -->
+                <label for="voucher">Pilih Voucher</label>
+                <select id="voucher" name="voucher">
+                    <option value="3hours">Voucher 3 Jam - Rp 3,000</option>
+                    <option value="12hours">Voucher 12 Jam - Rp 6,000</option>
+                    <option value="3days">Voucher 3 Hari - Rp 16,000</option>
+                </select>
+
+                <!-- Tombol untuk melanjutkan -->
+                <button type="submit" class="btn">Lanjutkan Pembayaran</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 AIWA Voucher. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
